@@ -2,7 +2,7 @@ node{
     def mvnHome
  
    stage('SetEnv') { 
-      git 'https://github.com/cltalam/Snykscriptbasedintegration.git'
+      git 'https://github.com/pallavi9099/snyk.git'
       mvnHome = tool 'MAVEN_HOME'
 	   
    }
@@ -14,7 +14,7 @@ node{
       
    }
    stage('Snyk'){
-        snykSecurity failOnIssues: false, organisation: '0a9abaf4-c5e7-4e79-bd0d-94090771174a', snykInstallation: 'snyknew', snykTokenId: 'snykkey'
+        snykSecurity failOnIssues: false, organisation: '72ae82be-129a-4317-a738-d10d0a4ae92a', snykInstallation: 'Snyknew', snykTokenId: 'Snykkey'
        
    }
 
